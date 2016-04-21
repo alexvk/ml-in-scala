@@ -13,6 +13,7 @@
 .wtpmodules
 
 # Local Files #
+.cache*
 target/
 conf/
 lib/
