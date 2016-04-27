@@ -21,7 +21,7 @@ $ sbt package
 Alternativelym, you can go to individual directories and type `sbt run`, which in most cases should run the application (chapter 10 needs to start a jetty service, in which case you need `sbt jetty:start`).
 
 # Interactive mode
-Sbt has an interactive command line capabilites.  For example, to continuously compile code on each source file change, do
+SBT has an interactive command line capabilites.  For example, to continuously compile code on each source file change, do
 
 ```bash
 $ sbt
