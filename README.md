@@ -29,12 +29,29 @@ $ sbt
 > ~run
 ...
 ```
+# Generating docs
+SBT will generate [Scaladoc](http://www.scala-sbt.org/0.13/docs/Howto-Scaladoc.html) with `sbt doc` command.
+
+# Scalastyle
+To add SBT [Scalastyle plugin](http://www.scalastyle.org/sbt.html) create the `project/plugins.sbt` file:
+
+```bash
+$ cat > project.plugin.sbt << EOF
+addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.8.0")
+EOF
+$ sbt scalastyleGenerateConfig
+$ sbt scalastyle
+...
+
+```
 
 # Using with Eclipse
 Currently, you need to install the sbteclipse plugin with your sbt environemnt (add the following line to your build.sbt)
 
 ```bash
-echo 'addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "4.0.0")' >> project/plugins.sbt
+$ echo 'addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "4.0.0")' >> project/plugins.sbt
+$ sbt eclipse
+...
 ```
 
-After which the `sbt eclipse` target will be added to create Eclipse `.project` and `.classpath` files.  Import the project from [Eclipse for Scala](http://scala-ide.org).
+The `eclipse` target will be added to create the Eclipse `.project` and `.classpath` files.  Import the project from [Eclipse for Scala](http://scala-ide.org).
