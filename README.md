@@ -46,7 +46,7 @@ $ sbt scalastyle
 ```
 
 # Using with Eclipse
-Currently, you need to install the sbteclipse plugin with your sbt environemnt (add the following line to your build.sbt)
+Currently, you need to install the sbteclipse plugin with your SBT environment (add the following line to your build.sbt)
 
 ```bash
 $ echo 'addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "4.0.0")' >> project/plugins.sbt
