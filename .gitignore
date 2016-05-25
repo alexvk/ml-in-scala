@@ -17,3 +17,5 @@
 target/
 conf/
 lib/
+logs/
+log/
