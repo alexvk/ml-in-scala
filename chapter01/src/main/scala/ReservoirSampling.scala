@@ -4,8 +4,8 @@ import scala.reflect.ClassTag
 import scala.util.Random
 import util.Properties
 
-object InfluenceDiagram extends App {
-  def reservoirSample[T: ClassTag](input: Iterator[T],k: Int): Array[T] = {
+object ReservoirSampling extends App {
+  def reservoirSample[T: ClassTag](input: Iterator[T], k: Int): Array[T] = {
     val reservoir = new Array[T](k)
     // Put the first k elements in the reservoir.
     var i = 0

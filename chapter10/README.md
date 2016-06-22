@@ -3,7 +3,7 @@
 ## Build & Run ##
 
 ```sh
-$ cd Advanced_Model_Monitoring
+$ cd chapter10
 $ ./sbt
 > jetty:start
 > browse

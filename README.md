@@ -18,7 +18,7 @@ To compile all code, do
 $ sbt package
 ```
 
-Alternativelym, you can go to individual directories and type `sbt run`, which in most cases should run the application (chapter 10 needs to start a jetty service, in which case you need `sbt jetty:start`).
+Alternatively, you can go to individual directories and type `sbt run`, which in most cases should run the application (chapter 10 needs to start a jetty service, in which case you need `sbt jetty:start`).
 
 # Interactive mode
 SBT has an interactive command line capabilites.  For example, to continuously compile code on each source file change, do
@@ -29,6 +29,7 @@ $ sbt
 > ~run
 ...
 ```
+
 # Generating docs
 SBT will generate [Scaladoc](http://www.scala-sbt.org/0.13/docs/Howto-Scaladoc.html) with `sbt doc` command.
 
@@ -36,7 +37,7 @@ SBT will generate [Scaladoc](http://www.scala-sbt.org/0.13/docs/Howto-Scaladoc.h
 To add SBT [Scalastyle plugin](http://www.scalastyle.org/sbt.html) create the `project/plugins.sbt` file:
 
 ```bash
-$ cat > project.plugin.sbt << EOF
+$ cat <<EOF > project.plugin.sbt 
 addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.8.0")
 EOF
 $ sbt scalastyleGenerateConfig
@@ -55,3 +56,11 @@ $ sbt eclipse
 ```
 
 The `eclipse` target will be added to create the Eclipse `.project` and `.classpath` files.  Import the project from [Eclipse for Scala](http://scala-ide.org).
+
+# Cleanup
+Sbt does not clean target directories.  For complete cleanup, do:
+```bash
+$ sbt clean
+$ find . -name target -exec rm -rf {} \;
+```
+

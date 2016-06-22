@@ -18,8 +18,7 @@ lazy val root = project.in(file("."))
     chapter06,
     chapter07,
     chapter08,
-    chapter09,
-    chapter10
+    chapter09
   )
 
 lazy val chapter01 = ProjectRef(file("chapter01"), "chapter01")
